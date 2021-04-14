@@ -21,7 +21,7 @@ function findGCD(int $a, int $b): int
 
 function getGCDGame(): array
 {
-    $game = function () {
+    $game = function (): array {
         $a = rand(1, 50);
         $b = rand(1, 50);
         $gcd = findGCD($a, $b);

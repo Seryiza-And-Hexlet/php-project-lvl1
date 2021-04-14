@@ -17,7 +17,7 @@ function isPrime(int $number): bool
 
 function getPrimeGame(): array
 {
-    $game = function () {
+    $game = function (): array {
         $number = rand(1, 100);
         $answer = isPrime($number) ? 'yes' : 'no';
         return [$number, $answer];

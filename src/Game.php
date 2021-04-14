@@ -6,7 +6,7 @@ use function cli\line;
 use function cli\prompt;
 
 const GAMES_COUNT_TO_WIN = 3;
-const DEFAULT_USERNAME_DISABLED = null;
+const DEFAULT_USERNAME_DISABLED = '';
 
 function playGame(string $gameRules, callable $game): void
 {
@@ -25,14 +25,10 @@ function playGame(string $gameRules, callable $game): void
             line('Correct!');
         } else {
             line("'{$enteredAnswer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.");
-            break;
+            line("Let's try again, {$playerName}!");
+            return;
         }
     }
 
-    $didWin = $i === GAMES_COUNT_TO_WIN;
-    if ($didWin) {
-        line("Congratulations, {$playerName}!");
-    } else {
-        line("Let's try again, {$playerName}!");
-    }
+    line("Congratulations, {$playerName}!");
 }

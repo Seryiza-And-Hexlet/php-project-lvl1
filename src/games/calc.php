@@ -28,7 +28,7 @@ function formatExpression(string $operator, int $leftOperand, int $rightOperand)
 
 function getCalcGame(): array
 {
-    $game = function () {
+    $game = function (): array {
         $leftOperand = rand(1, 10);
         $rightOperand = rand(1, 10);
         $operator = OPERATORS[array_rand(OPERATORS)];

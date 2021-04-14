@@ -22,7 +22,7 @@ function formatNumbersWithHidedOne(array $numbers, int $hidingNumberIndex): stri
 
 function getProgressionGame(): array
 {
-    $game = function () {
+    $game = function (): array {
         $startNumber = rand(1, 80);
         $difference = rand(1, 10);
         $numberSequence = getNumberSequence($startNumber, $difference, NUMBERS_IN_SEQUENCE);
