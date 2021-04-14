@@ -1,0 +1,15 @@
+#!/usr/bin/env php
+<?php
+
+use function BrainGames\Game\playGame;
+use function BrainGames\Games\EvenGame\getEvenGame;
+
+$vendorAutoloadPath = __DIR__ . '/../../../autoload.php';
+$developmentAutoloadPath = __DIR__ . '/../vendor/autoload.php';
+if (file_exists($vendorAutoloadPath)) {
+    require_once $vendorAutoloadPath;
+} else {
+    require_once $developmentAutoloadPath;
+}
+
+playGame(...getEvenGame());
