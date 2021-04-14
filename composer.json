@@ -1,6 +1,10 @@
 {
     "name": "seryiza/php-project-lvl1",
+    "description": "My first PHP Hexlet project",
     "type": "project",
     "license": "MIT",
+    "bin": [
+        "bin/brain-games"
+    ],
     "require": {}
 }
